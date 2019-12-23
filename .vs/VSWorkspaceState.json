@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\mockups"
+    "\\mockups",
+    "\\utils"
   ],
-  "SelectedNode": "\\utils",
+  "SelectedNode": "\\utils\\_DATA.js",
   "PreviewInSolutionExplorer": false
 }
