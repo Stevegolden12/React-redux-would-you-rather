@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\mockups",
-    "\\src"
+    "\\src",
+    "\\src\\components",
+    "\\src\\reducers",
+    "\\src\\utils",
+    "\\utils"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\utils",
   "PreviewInSolutionExplorer": false
 }
