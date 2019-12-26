@@ -1,7 +1,16 @@
 import { _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA.js';
 
+export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 import ADD_QUESTION = 'ADD_QUESTION';
 import ADD_ANSWER = 'ADD_ANSWER';
+
+
+export function receiveQuestions(questions) {
+  return {
+    type: RECEIVE_QUESTIONS,
+    users,
+  }
+}
 
 function addNewQuestion(question) {
   return {
