@@ -3,11 +3,12 @@
     "",
     "\\mockups",
     "\\src",
+    "\\src\\actions",
     "\\src\\components",
     "\\src\\reducers",
     "\\src\\utils",
     "\\utils"
   ],
-  "SelectedNode": "\\src\\utils",
+  "SelectedNode": "\\src\\actions\\questions.js",
   "PreviewInSolutionExplorer": false
 }
