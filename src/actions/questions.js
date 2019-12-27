@@ -1,14 +1,14 @@
 import { _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA.js';
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
-import ADD_QUESTION = 'ADD_QUESTION';
-import ADD_ANSWER = 'ADD_ANSWER';
+export const ADD_QUESTION = 'ADD_QUESTION'
+export const ADD_ANSWER = 'ADD_ANSWER'
 
 
 export function receiveQuestions(questions) {
   return {
     type: RECEIVE_QUESTIONS,
-    users,
+    questions,
   }
 }
 
@@ -42,13 +42,13 @@ function addNewAnswer(answer) {
   }
 }
 
-export function addQuestion({ qid, answer }) {
+export function addAnswer({ qid, answer }) {
   return (dispatch, getState) => {
     const { authedUser } = getState()
 
     // dispatch(showLoading())
 
-    return _saveQuestion({
+    return _saveQuestionAnswer({
       qid,
       answer,
       author: authedUser,
