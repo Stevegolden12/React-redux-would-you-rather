@@ -5,10 +5,12 @@
     "\\src",
     "\\src\\actions",
     "\\src\\components",
+    "\\src\\image",
+    "\\src\\middleware",
     "\\src\\reducers",
     "\\src\\utils",
     "\\utils"
   ],
-  "SelectedNode": "\\src\\actions\\questions.js",
+  "SelectedNode": "\\src\\image\\UserIcon.svg",
   "PreviewInSolutionExplorer": false
 }
