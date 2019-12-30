@@ -161,3 +161,16 @@ li {
   font-size: 20px;
   color: #C3392A;
 }
+
+.login-mainwrapper {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.login-imagelayout {
+  display: block;
+  width: 250px;
+  margin: auto;
+}
