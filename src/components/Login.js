@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import usericon from '../image/usericon.svg'
+import { connect } from 'react-redux'
+import { handleInitialData } from '../actions/shared.js'
 
-export default class Login extends Component {
+export class Login extends Component {
+  componentDidMount() {
+    this.props.dispatch(handleInitialData())
+  }
   render() {
+    console.log(this.props)
     return (
         <main className='login-mainwrapper'>
           <div>
@@ -20,3 +26,11 @@ export default class Login extends Component {
       )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    state   
+  }
+}
+
+export default connect(mapStateToProps)(Login)
