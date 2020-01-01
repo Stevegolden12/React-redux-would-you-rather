@@ -27,9 +27,9 @@ export class Login extends Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({ users }) {
   return {
-    state   
+   newUsers: users,
   }
 }
 
