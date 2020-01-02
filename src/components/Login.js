@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import usericon from '../image/usericon.svg'
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared.js'
+//import LoadingBar from 'react-redux-loading'
 
 export class Login extends Component {
   componentDidMount() {
@@ -10,6 +11,7 @@ export class Login extends Component {
   render() {
     console.log(this.props)
     return (
+      <Fragment>    
         <main className='login-mainwrapper'>
           <div>
             <h1 className='center'>Would you rather App!</h1>
@@ -22,14 +24,16 @@ export class Login extends Component {
               </select>
             </div>
           </div>
-          </main>
+        </main>
+        </Fragment>
       )
   }
 }
 
-function mapStateToProps({ users }) {
+function mapStateToProps(state) {
+   console.log(state)
   return {
-   newUsers: users,
+    loading: 'Testing',
   }
 }
 
