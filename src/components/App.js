@@ -7,7 +7,7 @@ import Login from './Login'
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+  //  this.props.dispatch(handleInitialData())
   }
   render() {
     return (
