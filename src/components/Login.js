@@ -9,7 +9,12 @@ export class Login extends Component {
     this.props.dispatch(handleInitialData())
   }
   render() {
-    console.log(this.props)
+    const { users, questions } = this.props;
+    const usersArray = Object.values(users)
+    console.log(usersArray)
+    usersArray.map((user) => {
+      console.log(user.name)
+    })
     return (
       <Fragment>    
         <LoadingBar />
@@ -23,7 +28,9 @@ export class Login extends Component {
               <h3 className='center'>Sign In</h3>
               <div className='center'>
                 <select>
-                  <option>Placeholder</option>
+                  {usersArray.map((user) => (
+                    <option key={user.id} value={user.id}>{user.name}</option>                  
+                  ))}      
                 </select>
               </div>
             </div>
@@ -33,10 +40,13 @@ export class Login extends Component {
   }
 }
 
-function mapStateToProps({ authedUser }) {
-
+function mapStateToProps({ authedUser, users, questions }) { 
+  console.log(users)
+  console.log(questions)
   return {
-    loading: authedUser === null,
+    loading: authedUser === null, 
+    users,
+    questions,
   }
 }
 
