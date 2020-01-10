@@ -3,10 +3,24 @@ import usericon from '../image/usericon.svg'
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared.js'
 import LoadingBar from 'react-redux-loading'
+import { BrowserRouter as Router, Route } from 'react-router-dom' 
+import HomePage from './HomePage'
 
 export class Login extends Component {
+  constructor(props) {
+    super(props);
+
+  this.handleDropdownChange = this.handleDropdownChange.bind(this);
+  }
+
   componentDidMount() {
     this.props.dispatch(handleInitialData())
+  }
+
+  handleDropdownChange(e) {
+    e.preventDefault()
+
+     //< Route path = '/Home' exact component={ HomePage } />
   }
   render() {
     const { users, questions } = this.props;
@@ -27,7 +41,7 @@ export class Login extends Component {
               <img className='login-imagelayout' src={usericon} alt='user icon'></img>
               <h3 className='center'>Sign In</h3>
               <div className='center'>
-                <select>
+                <select >   
                   {usersArray.map((user) => (
                     <option key={user.id} value={user.id}>{user.name}</option>                  
                   ))}      
@@ -41,8 +55,7 @@ export class Login extends Component {
 }
 
 function mapStateToProps({ authedUser, users, questions }) { 
-  console.log(users)
-  console.log(questions)
+
   return {
     loading: authedUser === null, 
     users,
