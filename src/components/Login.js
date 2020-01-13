@@ -14,7 +14,6 @@ export class Login extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
   }
 
   handleDropdownChange(e) {
@@ -68,7 +67,7 @@ export class Login extends Component {
 }
 
 function mapStateToProps({ authedUser, users, questions }) { 
-    console.log(users)
+  
   return {
     loading: authedUser === null, 
     users,
