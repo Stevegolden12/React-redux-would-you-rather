@@ -7,7 +7,7 @@ class HomePage extends Component{
 
   render(){
     return (
-      <h1>Home Page</h1>
+      <h1>This will be the heading for HomePage</h1>
       )
   }
 }
