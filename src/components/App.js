@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 //import LoadingBar from 'react-redux-loading'
 import { handleInitialData } from '../actions/shared.js'
 import Login from './Login'
+import NavBar from './NavBar'
 
 class App extends Component {
   componentDidMount() {
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Nav</h1>
+        <NavBar />
       <div>   
           <Login />
         </div>
