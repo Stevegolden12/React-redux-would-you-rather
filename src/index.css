@@ -229,3 +229,9 @@ li {
   border-top: 2px solid #17b994;
   margin-top: 0px;
 }
+
+/* Login Page */
+.login-dropdown {
+  width: 200px;
+  height: 40px;
+}
