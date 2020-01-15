@@ -29,9 +29,9 @@ export class Login extends Component {
   render() {
     const { users, questions } = this.props;
     const usersArray = Object.values(users)
-    console.log(usersArray)
+   // console.log(usersArray)
     usersArray.map((user) => {
-      console.log(user.name)
+      //console.log(user.name)
     })
     return (
       <Fragment>    
@@ -45,22 +45,14 @@ export class Login extends Component {
               <img className='login-imagelayout' src={usericon} alt='user icon'></img>
               <h3 className='center'>Sign In</h3>
               <div className='center'>
-                <select onChange={this.handleDropdownChange} >   
-                  {usersArray.map((user) => (
-                    <option key={user.id} value={user.id}>{user.name}</option>                  
+                <select className="login-dropdown"onChange={this.handleDropdownChange} >   
+                  {usersArray.map((user) => (                   
+                    <option key={user.id} value={user.id} >{user.name}</option>                  
                   ))}      
                 </select>
               </div>
             </div>
           </main>}
-        <section>TESTING
-        <Router>
-            <ul>
-
-              <li></li>
-            </ul>
-        </Router>        
-        </section>
       </Fragment>
       )
   }

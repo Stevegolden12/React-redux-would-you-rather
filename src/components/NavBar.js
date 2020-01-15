@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 class NavBar extends Component {
   render() {
+    console.log(this.props.users)
     return (
       <Fragment>
         <ul className="navbar-wrapper">
@@ -18,4 +19,10 @@ class NavBar extends Component {
   }
 }
 
-export default connect()(NavBar)
+function mapStateToProps({ users}) {
+  return {
+    users,
+  }
+}
+
+export default connect(mapStateToProps)(NavBar)
