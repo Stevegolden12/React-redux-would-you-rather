@@ -19,8 +19,9 @@ class NavBar extends Component {
   }
 }
 
-function mapStateToProps({ users}) {
+function mapStateToProps({ authedUser, users }) {
   return {
+    authedUser,
     users,
   }
 }

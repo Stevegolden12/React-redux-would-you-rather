@@ -47,12 +47,35 @@ export class Login extends Component {
               <div className='center'>
                 <select className="login-dropdown"onChange={this.handleDropdownChange} >   
                   {usersArray.map((user) => (                   
-                    <option key={user.id} value={user.id} >{user.name}</option>                  
+                    <option key={user.id} value={user.id}><img src={user.avatarURL} /> {user.name}</option>                  
                   ))}      
                 </select>
               </div>
             </div>
           </main>}
+        <section> 
+          <div className="login-dropdowncontainer">
+            <nav className="login-nav">
+              <ul>        
+                <li>WordPress        
+                <ul>
+             
+                </ul>
+               </li>
+              </ul>
+             </nav>              
+           </div>
+        </section>
+        <div class="container">
+          <div class="dropdown">
+            <div class="caption">Select</div>
+            <div class="list">
+              {usersArray.map((user) => (
+                <div class="item"> <img src={user.avatarURL} className="login-dropdownimage" /> {user.name}</div>
+              ))}      
+            </div>
+          </div>
+        </div>
       </Fragment>
       )
   }
