@@ -230,62 +230,6 @@ li {
   margin-top: 0px;
 }
 
-/* Login Page */
-.login-dropdown {
-  width: 200px;
-  height: 40px;
+.login-dropdown-image {
+
 }
-
-.login-dropdowncontainer {
-  margin: 0 auto;
-}
-
-.login-nav {
-  margin: 50px 0;
-  background-color: #E64A19;
-}
-
-  .login-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-  }
-
-    .login-nav ul li {
-      display: inline-block;
-      background-color: #E64A19;
-    }
-
-  .login-nav a {
-    display: block;
-    padding: 0 10px;
-    color: #FFF;
-    font-size: 20px;
-    line-height: 60px;
-    text-decoration: none;
-  }
-
-    .login-nav a:hover {
-      background-color: #000000;
-    }
-
-/* Hide Dropdowns by Default */
-  .login-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 60px; /* the height of the main nav */
-  }
-
-/* Display Dropdowns on Hover */
-  .login-nav ul li:hover > ul {
-    display: inherit;
-  }
-
-/* Fisrt Tier Dropdown */
-  .login-nav ul ul li {
-    width: 170px;
-    float: none;
-    display: list-item;
-    position: relative;
-  }
