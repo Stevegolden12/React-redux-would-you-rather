@@ -5,6 +5,7 @@ import { handleInitialData } from '../actions/shared.js'
 import LoadingBar from 'react-redux-loading'
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom' 
 import HomePage from './HomePage'
+import { Dropdown } from 'react-bootstrap'
 
 export class Login extends Component {
   constructor(props) {
@@ -53,29 +54,19 @@ export class Login extends Component {
               </div>
             </div>
           </main>}
-        <section> 
-          <div className="login-dropdowncontainer">
-            <nav className="login-nav">
-              <ul>        
-                <li>WordPress        
-                <ul>
-             
-                </ul>
-               </li>
-              </ul>
-             </nav>              
-           </div>
-        </section>
-        <div class="container">
-          <div class="dropdown">
-            <div class="caption">Select</div>
-            <div class="list">
-              {usersArray.map((user) => (
-                <div class="item"> <img src={user.avatarURL} className="login-dropdownimage" /> {user.name}</div>
-              ))}      
-            </div>
-          </div>
-        </div>
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Dropdown Button
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            {usersArray.map((user) => (
+              <Dropdown.Item key={user.id} value={user.id}><img className="login-dropdown-image" src={user.avatarURL} /> {user.name}</Dropdown.Item>
+            ))}            
+          </Dropdown.Menu>
+        </Dropdown>
+
+
       </Fragment>
       )
   }
