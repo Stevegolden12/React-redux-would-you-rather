@@ -230,6 +230,22 @@ li {
   margin-top: 0px;
 }
 
-.login-dropdown-image {
+.login-dropdownWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -30px;
+}
 
+.login-dropdown-image {
+  height: 50px;
+}
+
+.show {
+  width: 248px;
+  position: absolute;
+  will-change: transform !important;
+  top: 0px !important;
+  left: 0px !important;
+  transform: translate3d(0px, 72px, 0px) !important;
 }
