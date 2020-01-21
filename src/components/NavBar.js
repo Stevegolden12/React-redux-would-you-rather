@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 class NavBar extends Component {
   render() {
@@ -7,9 +8,18 @@ class NavBar extends Component {
     return (
       <Fragment>
         <ul className="navbar-wrapper">
-          <li className="navbar-list-item"><span>Home</span></li>
-          <li className="navbar-list-item"><span>New Question</span></li>
-          <li className="navbar-list-item"><span>Leader Board</span></li>
+          <li className="navbar-list-item"><span>
+            <NavLink to='/homepage' exact activeClassName='active'>
+            Home Page
+          </NavLink></span></li>
+          <li className="navbar-list-item"><span>
+            <NavLink to='/newQuestion' exact activeClassName='active'>
+            New Question
+          </NavLink></span></li>
+          <li className="navbar-list-item"><span>
+            <NavLink to='/leaderboard' exact activeClassName='active'>
+              Leaderboard
+          </NavLink></span></li>       
           <li className="navbar-list-item"><span>User Info</span></li>
           <li className="navbar-list-item"><span>Logout</span></li>
         </ul>
