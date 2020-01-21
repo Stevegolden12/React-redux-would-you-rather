@@ -4,16 +4,20 @@ import LoadingBar from 'react-redux-loading'
 import { addQuestion } from '../actions/questions'
 
 
-export default NewQuestion extends Component{
+class NewQuestion extends Component{
   constructor(props){
     super(props)
     this.state = {
       questionOne: '',
       questionTwo: '',
     }
+    /*
     this.handleChange = this.handleChange.bind(this)
     this.submitChange = this.submitChange.bind(this)
+     */
   }
+
+  /*
   handleChange = (e, question) => {
     e.preventDefault()
 
@@ -22,16 +26,17 @@ export default NewQuestion extends Component{
     })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = (e, dispatch) => {
     e.preventDefault()   
 
     dispatch(addQuestion(this.state.questionOne, this.state.questionTwo))
        
   }
-
+  */
   render(){
     return (
       <Fragment>
+        {/*
         <h1>New Question</h1>
         <main>
           <h2>Create New Question</h2>
@@ -49,9 +54,10 @@ export default NewQuestion extends Component{
                   name="optiontwoquestion"
                   placeholder="Enter option two text here"
                   onChange={this.handleChange(questionTwo)}/><br>
-              <input type="submit" value="Submit">
+              <input type="submit" value="Submit" />
           </form>
         </main>
+        */}
       </Fragment>
       )
   }
