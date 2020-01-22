@@ -187,10 +187,10 @@ li {
   justify-content: center;
   /*  List item shape */
   border-bottom: 45px solid white;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
   height: 0;
-  width: 100px;
+  width: 121px;
 }
 
   .navbar-list-item:hover {
@@ -200,7 +200,7 @@ li {
 
   .navbar-list-item:nth-child(1) span {
     position: relative;
-    top: 25px;
+    top: 8px;
   }
 
   .navbar-list-item:nth-child(2) span {
@@ -210,7 +210,7 @@ li {
 
   .navbar-list-item:nth-child(3) span {
     position: relative;
-    top: 11px;
+    top: 30px;
   }
 
   .navbar-list-item:nth-child(4) span {
