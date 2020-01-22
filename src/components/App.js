@@ -14,12 +14,13 @@ class App extends Component {
     this.props.dispatch(handleInitialData())
   }
   render() {
+    console.log(this.props)
     return (
       <Fragment>
         <Router>
         <NavBar />
       <div>   
-          <Login />
+            {this.props.loading === false && <Route exact path="/"></Route> }     
         </div>
        
           <Route path='/' exact component={Login} />
