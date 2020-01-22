@@ -21,7 +21,11 @@ class NavBar extends Component {
               Leaderboard
           </NavLink></span></li>       
           <li className="navbar-list-item"><span>User Info</span></li>
-          <li className="navbar-list-item"><span>Logout</span></li>
+          <li className="navbar-list-item"><span>
+            <NavLink to='/' exact activeClassName='active'>
+              Logout
+            </NavLink>
+          </span></li>
         </ul>
         <hr className="navbar-hr" />
       </Fragment>
