@@ -12,10 +12,16 @@ export class Login extends Component {
   constructor(props) {
     super(props);
 
-  this.handleDropdownChange = this.handleDropdownChange.bind(this);
+    this.handleDropdownChange = this.handleDropdownChange.bind(this);
+    this.handleAuthUser = this.handleAuthUser.bind(this);
   }
 
   componentDidMount() {
+  }
+
+  handleAuthUser(e) {
+    e.preventDefault;
+    console.log(e.value)
   }
 
   handleDropdownChange(e) {
@@ -51,7 +57,7 @@ export class Login extends Component {
                 <Dropdown.Toggle variant="primary" id="dropdown">
                   Users
               </Dropdown.Toggle>     
-                <Dropdown.Menu >
+                  <Dropdown.Menu onSelect={this.handleAuthUser}>
                   {usersArray.map((user) => (
                     <Dropdown.Item key={user.id} value={user.id}><img className="login-dropdown-image" src={user.avatarURL} /> {user.name}</Dropdown.Item>
                   ))}
